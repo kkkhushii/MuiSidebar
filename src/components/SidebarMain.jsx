@@ -4,7 +4,8 @@ import SidebarContent from '../Data/SidebarData';
 import '../Styles/sidebar.css';
 import NavItems from './NavItems';
 import NavCollapse from './NavCollapse';
-import { Sidebar, Menu } from "react-mui-sidebar";
+import ListSubheader from '@mui/material/ListSubheader';
+import List from '@mui/material/List';
 
 function SidebarMain() {
   const { selectedIconId } = useContext(IconContext);
@@ -13,25 +14,24 @@ function SidebarMain() {
 
   return (
 
-    <Sidebar width={"270px"}>
-      {selectedContent && (
-        <div className="sidebar-content">
-          {selectedContent.items.map((item, index) => (
-            <Menu key={index} subHeading={item.heading}>
-              {item.children.map((child, index) => (
-                <div key={index}>
-                  {child.children ? (
-                    <NavCollapse item={child} />
-                  ) : (
-                    <NavItems item={child} />
-                  )}
-                </div>
-              ))}
-            </Menu>
+    <List>
+      {selectedContent && selectedContent.items.map((item, index) => (
+        <div key={index}>
+          <ListSubheader component="div" id={`nested-list-subheader-${index}`}>
+            {item.heading}
+          </ListSubheader>
+          {item.children.map((child, childIndex) => (
+            <div key={childIndex}>
+              {child.children ? (
+                <NavCollapse item={child} />
+              ) : (
+                <NavItems item={child} />
+              )}
+            </div>
           ))}
         </div>
-      )}
-    </Sidebar>
+      ))}
+    </List>
 
   );
 }

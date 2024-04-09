@@ -3,13 +3,13 @@
   padding: 10px;
   color: #29343d;
 }
-html .MuiDrawer-paper, html .MuiPaper-root{
+/* html .MuiDrawer-paper, html .MuiPaper-root{
   position:relative !important
  
 }
 html .MuiListItemIcon-root{
   display: none !important;
-}
-.iconstyle{
-  margin-right: 10px;
-}
+} */
+/* .iconstyle{
+  margin-right: 8px;
+} */
