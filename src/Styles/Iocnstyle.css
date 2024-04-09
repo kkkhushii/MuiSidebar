@@ -1,0 +1,42 @@
+.mini-nav {
+  background-color: #f4f7fb;
+  min-height: 100vh;
+  height: auto;
+  width: 80px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.mini-nav-ul {
+  list-style: none;
+  width: 100%;
+  padding: 15px 0;
+}
+.mini-nav-li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+}
+.li-icons {
+  color: #29343d;
+}
+.li-icons {
+  padding: 8px;
+  border-radius: 10px;
+  transition: background-color 0.3s padding 0.3s;
+}
+.li-icons:hover {
+  background-color:#7397fc;
+  padding: 10px;
+  color: white;
+}
+.li-icons.active {
+   background-color: #5d87ff;
+    padding: 10px;
+  color: white;
+}
+
+ .MuiBox-root >   .css-whu3bg{display: none;} 

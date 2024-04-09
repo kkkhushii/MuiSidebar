@@ -1,0 +1,15 @@
+
+.sidebar-content {
+  padding: 10px;
+  color: #29343d;
+}
+.css-zune9c-MuiPaper-root-MuiDrawer-paper{
+  position:static !important
+ 
+}
+.css-11cutua-MuiButtonBase-root-MuiListItemButton-root .MuiListItemIcon-root{
+  display: none;
+}
+.iconstyle{
+  margin-right: 10px;
+}
