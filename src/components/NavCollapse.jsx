@@ -3,9 +3,6 @@ import NavItems from '../components/NavItems'
 import { Submenu } from 'react-mui-sidebar';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
-
-
-
 function NavCollapse({ item, level = 0 }) {
   const marginLeft = `${level * 20}px`;
 
