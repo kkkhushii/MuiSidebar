@@ -12,6 +12,7 @@ function SidebarMain() {
 
 
   return (
+
     <Sidebar width={"270px"}>
       {selectedContent && (
         <div className="sidebar-content">

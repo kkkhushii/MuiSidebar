@@ -3,12 +3,12 @@
   padding: 10px;
   color: #29343d;
 }
-.css-zune9c-MuiPaper-root-MuiDrawer-paper{
-  position:static !important
+html .MuiDrawer-paper, html .MuiPaper-root{
+  position:relative !important
  
 }
-.css-11cutua-MuiButtonBase-root-MuiListItemButton-root .MuiListItemIcon-root{
-  display: none;
+html .MuiListItemIcon-root{
+  display: none !important;
 }
 .iconstyle{
   margin-right: 10px;
