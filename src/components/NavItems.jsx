@@ -8,12 +8,9 @@ import { List } from '@mui/material';
 
 function NavItems({ item }) {
   const Icon = item.icon;
+
   return (
 
-    // <MenuItem>
-    //   {item.icon ? <Icon className="iconstyle" /> : <FiberManualRecordIcon sx={{ fontSize: '12px' }} className="iconstyle" />}
-    //   {item.name}
-    // </MenuItem>
 
     <List>
       <ListItemButton>

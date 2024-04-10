@@ -1,11 +1,13 @@
-/* eslint-disable react/prop-types */
 import NavItems from '../components/NavItems'
 import { useState } from 'react';
 import { List, ListItemButton, ListItemIcon, ListItemText, Collapse } from '@mui/material';
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+
 
 function NavCollapse({ item, level = 0 }) {
   const marginLeft = `${level * 20}px`;
+
   const Icon = item.icon;
   const [open, setOpen] = useState(false);
 
@@ -17,13 +19,15 @@ function NavCollapse({ item, level = 0 }) {
     <List component="nav">
       {item.children && (
         <>
-          <ListItemButton onClick={handleClick}>
-
+          <ListItemButton onClick={handleClick} >
+            {item.icon ? <ListItemIcon><item.icon /></ListItemIcon> : <ListItemIcon><FiberManualRecordIcon sx={{ fontSize: '12px' }} /></ListItemIcon>}
             <ListItemText primary={item.name} />
             <ListItemIcon>
               {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemIcon>
           </ListItemButton>
+
+
           <Collapse in={open} timeout="auto" unmountOnExit>
             {item.children.map((child, index) => (
               <div key={index} style={{ marginLeft }}>
@@ -36,8 +40,9 @@ function NavCollapse({ item, level = 0 }) {
             ))}
           </Collapse>
         </>
-      )}
-    </List>
+      )
+      }
+    </List >
 
   );
 }

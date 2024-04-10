@@ -14,7 +14,7 @@ function SidebarMain() {
 
   return (
 
-    <List>
+    <List sx={{ width: '100%', maxWidth: 260, bgcolor: 'background.paper', borderRight: 1, borderColor: 'divider', boxShadow: 3 }}>
       {selectedContent && selectedContent.items.map((item, index) => (
         <div key={index}>
           <ListSubheader component="div" id={`nested-list-subheader-${index}`}>
